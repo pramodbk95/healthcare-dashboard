@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+// Import your dashboard components
+import CalendarView from './components/dashboard/CalendarView';
+import UpcomingSchedule from './components/dashboard/UpcomingSchedule';
+import ActivityFeed from './components/dashboard/ActivityFeed';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Healthcare Dashboard</h1>
       </header>
+
+      <main>
+        <CalendarView />
+        <UpcomingSchedule />
+        <ActivityFeed />
+      </main>
     </div>
   );
 }
